@@ -7,7 +7,6 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
 let idCount = 0;
 
 function criarId() {
@@ -77,6 +76,6 @@ app.get("/produtos/:id", (req, res) => {
   res.json(produto);
 });
 
-app.listen(8080, () =>
+app.listen(8080, "0.0.0.0", () =>
   console.log("Server is running at http://localhost:8080/")
 );
